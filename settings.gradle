@@ -1,0 +1,3 @@
+rootProject.name = 'chronicle-sdk'
+
+include 'sample-app'
