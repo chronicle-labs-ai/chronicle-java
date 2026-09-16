@@ -48,7 +48,7 @@ public final class ClientOptions {
         this.headers.putAll(new HashMap<String, String>() {
             {
                 put("X-Fern-Language", "JAVA");
-                put("X-Fern-SDK-Name", "com.chroniclelabs:chronicle-sdk");
+                put("X-Fern-SDK-Name", "com.chronicle-labs:chronicle-sdk");
                 put("X-Fern-SDK-Version", "0.0.9");
             }
         });

@@ -1,7 +1,7 @@
 # ChronicleLabs Java Library
 
 [![fern shield](https://img.shields.io/badge/%F0%9F%8C%BF-Built%20with%20Fern-brightgreen)](https://buildwithfern.com?utm_source=github&utm_medium=github&utm_campaign=readme&utm_source=https%3A%2F%2Fgithub.com%2Fchronicle-labs-ai%2Fchronicle-java)
-[![Maven Central](https://img.shields.io/maven-central/v/com.chroniclelabs/chronicle-sdk)](https://central.sonatype.com/artifact/com.chroniclelabs/chronicle-sdk)
+[![Maven Central](https://img.shields.io/maven-central/v/com.chronicle-labs/chronicle-sdk)](https://central.sonatype.com/artifact/com.chronicle-labs/chronicle-sdk)
 
 The ChronicleLabs Java library provides convenient access to the ChronicleLabs APIs from Java.
 
@@ -29,7 +29,7 @@ Add the dependency in your `build.gradle` file:
 
 ```groovy
 dependencies {
-  implementation 'com.chroniclelabs:chronicle-sdk:0.0.9'
+  implementation 'com.chronicle-labs:chronicle-sdk:0.0.9'
 }
 ```
 
@@ -39,7 +39,7 @@ Add the dependency in your `pom.xml` file:
 
 ```xml
 <dependency>
-  <groupId>com.chroniclelabs</groupId>
+  <groupId>com.chronicle-labs</groupId>
   <artifactId>chronicle-sdk</artifactId>
   <version>0.0.9</version>
 </dependency>
