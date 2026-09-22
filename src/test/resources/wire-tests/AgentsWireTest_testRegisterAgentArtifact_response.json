@@ -1,0 +1,94 @@
+{
+  "artifact": {
+    "artifactId": "artifactId",
+    "configHash": "configHash",
+    "description": "description",
+    "framework": "vercel-ai-sdk",
+    "inputContractPreview": {
+      "example": {
+        "key": "value"
+      },
+      "schemaSummary": "schemaSummary"
+    },
+    "instructions": "instructions",
+    "instructionsHash": "instructionsHash",
+    "knowledgeSources": [
+      {
+        "id": "id",
+        "kind": "vector",
+        "label": "label"
+      }
+    ],
+    "metadata": {
+      "key": "value"
+    },
+    "model": {
+      "label": "label",
+      "modelId": "modelId",
+      "provider": "provider"
+    },
+    "name": "name",
+    "outputContractPreview": {
+      "example": {
+        "key": "value"
+      },
+      "schemaSummary": "schemaSummary"
+    },
+    "policy": {
+      "allowedTools": [
+        "allowedTools"
+      ],
+      "approvalRequired": [
+        "approvalRequired"
+      ],
+      "maxSteps": 1,
+      "metadata": {
+        "key": "value"
+      }
+    },
+    "provenance": {
+      "aiSdkVersion": "aiSdkVersion",
+      "createdAt": "2024-01-15T09:30:00Z",
+      "dependencyLockHash": "dependencyLockHash",
+      "frameworkVersion": "frameworkVersion",
+      "gitSha": "gitSha",
+      "publishedBy": "publishedBy"
+    },
+    "providerOptions": {
+      "key": "value"
+    },
+    "providerOptionsHash": "providerOptionsHash",
+    "schemaVersion": "schemaVersion",
+    "tools": [
+      {
+        "name": "name"
+      }
+    ],
+    "version": "version",
+    "workflowGraphPreview": {
+      "edges": [
+        {
+          "from": "from",
+          "to": "to"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "id",
+          "kind": "input",
+          "label": "label"
+        }
+      ]
+    }
+  },
+  "lastRunAt": "2024-01-15T09:30:00Z",
+  "meanDurationMs": 1,
+  "p95DurationMs": 1,
+  "resolvedModelIds": [
+    "resolvedModelIds"
+  ],
+  "runCount": 1,
+  "status": "current",
+  "successRate": 1.1,
+  "totalTokens": 1
+}

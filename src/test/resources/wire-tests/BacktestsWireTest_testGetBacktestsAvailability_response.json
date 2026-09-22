@@ -1,0 +1,120 @@
+{
+  "agents": [
+    {
+      "capabilityTags": [
+        "capabilityTags"
+      ],
+      "category": "category",
+      "description": "description",
+      "environment": "environment",
+      "framework": "vercel-ai-sdk",
+      "lastDriftAt": "2024-01-15T09:30:00Z",
+      "lastRunAt": "2024-01-15T09:30:00Z",
+      "latestVersion": "latestVersion",
+      "model": {
+        "label": "label"
+      },
+      "modelLabel": "modelLabel",
+      "name": "name",
+      "owner": "owner",
+      "personaSummary": "personaSummary",
+      "playgroundUrl": "playgroundUrl",
+      "purpose": "purpose",
+      "runbookUrl": "runbookUrl",
+      "successRate": 1.1,
+      "totalRuns": 1,
+      "versionCount": 1
+    }
+  ],
+  "datasetSnapshots": {
+    "key": {
+      "clusters": [
+        {
+          "color": "color",
+          "id": "id",
+          "label": "label",
+          "traceIds": [
+            "traceIds"
+          ]
+        }
+      ],
+      "dataset": {
+        "id": "id",
+        "name": "name",
+        "traceCount": 1
+      },
+      "edges": [
+        {
+          "fromTraceId": "fromTraceId",
+          "toTraceId": "toTraceId",
+          "weight": 1.1
+        }
+      ],
+      "events": [
+        {
+          "id": "id",
+          "occurredAt": "2024-01-15T09:30:00Z",
+          "source": "source",
+          "type": "type"
+        }
+      ],
+      "tasks": [
+        {
+          "membershipId": "membershipId",
+          "subjectKind": "trace",
+          "task": {},
+          "traceId": "traceId",
+          "verifiers": [
+            {
+              "id": "id",
+              "kind": "rubric",
+              "label": "label",
+              "source": "proposed",
+              "weight": "low"
+            }
+          ]
+        }
+      ],
+      "traces": [
+        {
+          "durationMs": 1,
+          "eventCount": 1,
+          "label": "label",
+          "primarySource": "primarySource",
+          "sources": [
+            "sources"
+          ],
+          "startedAt": "2024-01-15T09:30:00Z",
+          "status": "ok",
+          "traceId": "traceId"
+        }
+      ]
+    }
+  },
+  "datasets": [
+    {
+      "archivedAt": "2024-01-15T09:30:00Z",
+      "createdBy": "createdBy",
+      "description": "description",
+      "eventCount": 1,
+      "id": "id",
+      "name": "name",
+      "purpose": "eval",
+      "tags": [
+        "tags"
+      ],
+      "traceCount": 1,
+      "updatedAt": "2024-01-15T09:30:00Z"
+    }
+  ],
+  "environments": [
+    {
+      "ephemeral": true,
+      "id": "id",
+      "label": "label",
+      "snapshotId": "snapshotId",
+      "snapshotLabel": "snapshotLabel",
+      "status": "status"
+    }
+  ]
+}

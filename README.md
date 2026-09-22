@@ -29,7 +29,7 @@ Add the dependency in your `build.gradle` file:
 
 ```groovy
 dependencies {
-  implementation 'com.chronicle-labs:chronicle-sdk:0.0.9'
+  implementation 'com.chronicle-labs:chronicle-sdk:0.0.10'
 }
 ```
 
@@ -41,7 +41,7 @@ Add the dependency in your `pom.xml` file:
 <dependency>
   <groupId>com.chronicle-labs</groupId>
   <artifactId>chronicle-sdk</artifactId>
-  <version>0.0.9</version>
+  <version>0.0.10</version>
 </dependency>
 ```
 

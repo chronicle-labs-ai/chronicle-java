@@ -1,0 +1,78 @@
+{
+  "artifacts": [
+    {
+      "contentType": "contentType",
+      "createdAt": "2024-01-15T09:30:00Z",
+      "id": "id",
+      "kind": "agent-log",
+      "path": "path",
+      "sizeBytes": 1000000,
+      "trialId": "trialId"
+    }
+  ],
+  "rewards": {
+    "key": 1.1
+  },
+  "scorers": [
+    {
+      "grader": {
+        "id": "id",
+        "kind": "rubric",
+        "label": "label",
+        "source": "proposed",
+        "weight": "low"
+      },
+      "rewardKey": "rewardKey"
+    }
+  ],
+  "steps": [
+    {
+      "actor": "environment",
+      "createdAt": "2024-01-15T09:30:00Z",
+      "endedAt": "2024-01-15T09:30:00Z",
+      "graderId": "graderId",
+      "id": "id",
+      "kind": "seed-event",
+      "ordinal": 1,
+      "payload": {
+        "key": "value"
+      },
+      "score": 1.1,
+      "startedAt": "2024-01-15T09:30:00Z",
+      "status": "ok",
+      "title": "title",
+      "trialId": "trialId"
+    }
+  ],
+  "trial": {
+    "agentId": "agentId",
+    "agentLabel": "agentLabel",
+    "attempt": 1,
+    "caseCluster": "caseCluster",
+    "caseId": "caseId",
+    "createdAt": "2024-01-15T09:30:00Z",
+    "durationMs": 1,
+    "exception": {
+      "kind": "kind",
+      "message": "message"
+    },
+    "id": "id",
+    "instruction": "instruction",
+    "isBaseline": true,
+    "jobId": "jobId",
+    "sandboxId": "sandboxId",
+    "status": "pending",
+    "tenantId": "tenantId",
+    "timings": {
+      "agentRunFinishedAt": "2024-01-15T09:30:00Z",
+      "agentRunStartedAt": "2024-01-15T09:30:00Z",
+      "agentSetupFinishedAt": "2024-01-15T09:30:00Z",
+      "agentSetupStartedAt": "2024-01-15T09:30:00Z",
+      "envSetupFinishedAt": "2024-01-15T09:30:00Z",
+      "envSetupStartedAt": "2024-01-15T09:30:00Z",
+      "verifierFinishedAt": "2024-01-15T09:30:00Z",
+      "verifierStartedAt": "2024-01-15T09:30:00Z"
+    },
+    "updatedAt": "2024-01-15T09:30:00Z"
+  }
+}

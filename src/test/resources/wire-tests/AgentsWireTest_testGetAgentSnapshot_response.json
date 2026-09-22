@@ -1,0 +1,104 @@
+{
+  "hashIndex": [
+    {
+      "agentName": "agentName",
+      "artifactId": "artifactId",
+      "framework": "vercel-ai-sdk",
+      "hash": "hash",
+      "kind": "agent.root",
+      "observedAt": "2024-01-15T09:30:00Z",
+      "path": "path",
+      "preview": "preview",
+      "runId": "runId"
+    }
+  ],
+  "runs": [
+    {
+      "artifactId": "artifactId",
+      "callOptionsHash": "callOptionsHash",
+      "configHash": "configHash",
+      "durationMs": 1,
+      "error": {
+        "message": "message"
+      },
+      "finishedAt": "2024-01-15T09:30:00Z",
+      "inputHash": "inputHash",
+      "operation": "generate",
+      "preparedCall": {
+        "hash": "hash"
+      },
+      "runId": "runId",
+      "schemaVersion": "schemaVersion",
+      "startedAt": "2024-01-15T09:30:00Z",
+      "status": "started",
+      "toolCalls": [
+        {
+          "callId": "callId",
+          "startedAt": "2024-01-15T09:30:00Z",
+          "status": "started",
+          "toolName": "toolName"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "capabilityTags": [
+      "capabilityTags"
+    ],
+    "category": "category",
+    "description": "description",
+    "environment": "environment",
+    "framework": "vercel-ai-sdk",
+    "lastDriftAt": "2024-01-15T09:30:00Z",
+    "lastRunAt": "2024-01-15T09:30:00Z",
+    "latestVersion": "latestVersion",
+    "model": {
+      "label": "label",
+      "modelId": "modelId",
+      "provider": "provider"
+    },
+    "modelLabel": "modelLabel",
+    "name": "name",
+    "owner": "owner",
+    "personaSummary": "personaSummary",
+    "playgroundUrl": "playgroundUrl",
+    "purpose": "purpose",
+    "runbookUrl": "runbookUrl",
+    "successRate": 1.1,
+    "totalRuns": 1,
+    "versionCount": 1
+  },
+  "versions": [
+    {
+      "artifact": {
+        "artifactId": "artifactId",
+        "configHash": "configHash",
+        "framework": "vercel-ai-sdk",
+        "model": {
+          "label": "label"
+        },
+        "name": "name",
+        "provenance": {
+          "createdAt": "2024-01-15T09:30:00Z"
+        },
+        "schemaVersion": "schemaVersion",
+        "tools": [
+          {
+            "name": "name"
+          }
+        ],
+        "version": "version"
+      },
+      "lastRunAt": "2024-01-15T09:30:00Z",
+      "meanDurationMs": 1,
+      "p95DurationMs": 1,
+      "resolvedModelIds": [
+        "resolvedModelIds"
+      ],
+      "runCount": 1,
+      "status": "current",
+      "successRate": 1.1,
+      "totalTokens": 1
+    }
+  ]
+}

@@ -6,8 +6,9 @@
     "publish-to": "central",
     "enable-wire-tests": true
   },
-  "originGitCommit": "1f01905b6f8278288a426f476325440816953046",
-  "originGitCommitIsDirty": true,
+  "originGitCommit": "e59147a4fc924257229324e2f45a802d064b115b",
+  "originGitCommitIsDirty": false,
   "invokedBy": "manual",
-  "sdkVersion": "0.0.9"
+  "requestedVersion": "0.0.10",
+  "sdkVersion": "0.0.10"
 }

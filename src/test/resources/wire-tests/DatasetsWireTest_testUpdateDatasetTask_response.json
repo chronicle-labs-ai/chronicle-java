@@ -1,0 +1,55 @@
+{
+  "addedAt": "2024-01-15T09:30:00Z",
+  "addedBy": "addedBy",
+  "clusterId": "clusterId",
+  "durationMs": 1,
+  "embedding": [
+    1.1,
+    1.1
+  ],
+  "eventCount": 1,
+  "label": "label",
+  "membershipId": "membershipId",
+  "note": "note",
+  "primarySource": "primarySource",
+  "refreshAvailable": true,
+  "revision": 1,
+  "sources": [
+    "sources",
+    "sources"
+  ],
+  "split": "train",
+  "startedAt": "2024-01-15T09:30:00Z",
+  "status": "ok",
+  "subjectId": "subjectId",
+  "subjectKind": "trace",
+  "task": {
+    "config": {
+      "agentTimeoutSec": 1.1,
+      "networkMode": "public",
+      "verifierTimeoutSec": 1.1
+    },
+    "environmentId": "environmentId",
+    "environmentVersionId": "environmentVersionId",
+    "expectedOutcome": {
+      "key": "value"
+    },
+    "instruction": "instruction",
+    "seedCutoffEventId": "seedCutoffEventId",
+    "solution": "solution",
+    "title": "title"
+  },
+  "traceId": "traceId",
+  "verifiers": [
+    {
+      "passThreshold": 1.1,
+      "scorerId": "scorerId",
+      "weight": "low"
+    },
+    {
+      "passThreshold": 1.1,
+      "scorerId": "scorerId",
+      "weight": "low"
+    }
+  ]
+}
