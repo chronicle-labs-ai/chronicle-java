@@ -211,7 +211,7 @@ public class RawAgentsClient {
             Response response = client.newCall(okhttpRequest).execute();
             ResponseBody responseBody = response.body();
             if (response.isSuccessful()) {
-              return new ChronicleLabsApiHttpResponse<>(Stream.fromSse(Map<String, Object>.class, new ResponseBodyReader(response)), response);
+              return new ChronicleLabsApiHttpResponse<>(Stream.<Map<String, Object>>fromSse((Class<Map<String, Object>>) (Class<?>) Map.class, new ResponseBodyReader(response)), response);
             }
             String responseBodyString = responseBody != null ? responseBody.string() : "{}";
             try {

@@ -250,7 +250,7 @@ public class AsyncRawAgentsClient {
               try {
                 ResponseBody responseBody = response.body();
                 if (response.isSuccessful()) {
-                  future.complete(new ChronicleLabsApiHttpResponse<>(Stream.fromSse(Map<String, Object>.class, new ResponseBodyReader(response)), response));
+                  future.complete(new ChronicleLabsApiHttpResponse<>(Stream.<Map<String, Object>>fromSse((Class<Map<String, Object>>) (Class<?>) Map.class, new ResponseBodyReader(response)), response));
                   return;
                 }
                 String responseBodyString = responseBody != null ? responseBody.string() : "{}";
