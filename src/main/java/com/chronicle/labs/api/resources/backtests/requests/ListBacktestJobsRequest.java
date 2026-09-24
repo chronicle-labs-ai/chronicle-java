@@ -26,6 +26,8 @@ public final class ListBacktestJobsRequest {
 
     private final Optional<Integer> limit;
 
+    private final Optional<String> cursor;
+
     private final Optional<Integer> offset;
 
     private final Map<String, Object> additionalProperties;
@@ -34,11 +36,13 @@ public final class ListBacktestJobsRequest {
             Optional<String> mode,
             Optional<String> status,
             Optional<Integer> limit,
+            Optional<String> cursor,
             Optional<Integer> offset,
             Map<String, Object> additionalProperties) {
         this.mode = mode;
         this.status = status;
         this.limit = limit;
+        this.cursor = cursor;
         this.offset = offset;
         this.additionalProperties = additionalProperties;
     }
@@ -56,6 +60,11 @@ public final class ListBacktestJobsRequest {
     @JsonProperty("limit")
     public Optional<Integer> getLimit() {
         return limit;
+    }
+
+    @JsonProperty("cursor")
+    public Optional<String> getCursor() {
+        return cursor;
     }
 
     @JsonProperty("offset")
@@ -78,12 +87,13 @@ public final class ListBacktestJobsRequest {
         return mode.equals(other.mode)
                 && status.equals(other.status)
                 && limit.equals(other.limit)
+                && cursor.equals(other.cursor)
                 && offset.equals(other.offset);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.mode, this.status, this.limit, this.offset);
+        return Objects.hash(this.mode, this.status, this.limit, this.cursor, this.offset);
     }
 
     @java.lang.Override
@@ -103,6 +113,8 @@ public final class ListBacktestJobsRequest {
 
         private Optional<Integer> limit = Optional.empty();
 
+        private Optional<String> cursor = Optional.empty();
+
         private Optional<Integer> offset = Optional.empty();
 
         @JsonAnySetter
@@ -114,6 +126,7 @@ public final class ListBacktestJobsRequest {
             mode(other.getMode());
             status(other.getStatus());
             limit(other.getLimit());
+            cursor(other.getCursor());
             offset(other.getOffset());
             return this;
         }
@@ -151,6 +164,17 @@ public final class ListBacktestJobsRequest {
             return this;
         }
 
+        @JsonSetter(value = "cursor", nulls = Nulls.SKIP)
+        public Builder cursor(Optional<String> cursor) {
+            this.cursor = cursor;
+            return this;
+        }
+
+        public Builder cursor(String cursor) {
+            this.cursor = Optional.ofNullable(cursor);
+            return this;
+        }
+
         @JsonSetter(value = "offset", nulls = Nulls.SKIP)
         public Builder offset(Optional<Integer> offset) {
             this.offset = offset;
@@ -163,7 +187,7 @@ public final class ListBacktestJobsRequest {
         }
 
         public ListBacktestJobsRequest build() {
-            return new ListBacktestJobsRequest(mode, status, limit, offset, additionalProperties);
+            return new ListBacktestJobsRequest(mode, status, limit, cursor, offset, additionalProperties);
         }
 
         public Builder additionalProperty(String key, Object value) {

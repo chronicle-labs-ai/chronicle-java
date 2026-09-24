@@ -58,7 +58,7 @@ java {
 
 group = 'com.chronicle-labs'
 
-version = '0.0.10'
+version = '0.0.11'
 
 jar {
     dependsOn(":generatePomFileForMavenPublication")
@@ -89,7 +89,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.chronicle-labs'
             artifactId = 'chronicle-sdk'
-            version = '0.0.10'
+            version = '0.0.11'
             from components.java
             pom {
                 name = 'chronicle-labs'

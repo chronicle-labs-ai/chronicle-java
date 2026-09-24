@@ -27,6 +27,8 @@ import java.util.Optional;
 public final class ListBacktestJobsResponse {
     private final boolean hasMore;
 
+    private final Optional<String> nextCursor;
+
     private final Optional<Integer> nextOffset;
 
     private final List<ListBacktestJobsResponseRunsItem> runs;
@@ -35,10 +37,12 @@ public final class ListBacktestJobsResponse {
 
     private ListBacktestJobsResponse(
             boolean hasMore,
+            Optional<String> nextCursor,
             Optional<Integer> nextOffset,
             List<ListBacktestJobsResponseRunsItem> runs,
             Map<String, Object> additionalProperties) {
         this.hasMore = hasMore;
+        this.nextCursor = nextCursor;
         this.nextOffset = nextOffset;
         this.runs = runs;
         this.additionalProperties = additionalProperties;
@@ -47,6 +51,14 @@ public final class ListBacktestJobsResponse {
     @JsonProperty("hasMore")
     public boolean getHasMore() {
         return hasMore;
+    }
+
+    @JsonIgnore
+    public Optional<String> getNextCursor() {
+        if (nextCursor == null) {
+            return Optional.empty();
+        }
+        return nextCursor;
     }
 
     @JsonIgnore
@@ -60,6 +72,12 @@ public final class ListBacktestJobsResponse {
     @JsonProperty("runs")
     public List<ListBacktestJobsResponseRunsItem> getRuns() {
         return runs;
+    }
+
+    @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
+    @JsonProperty("nextCursor")
+    private Optional<String> _getNextCursor() {
+        return nextCursor;
     }
 
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = NullableNonemptyFilter.class)
@@ -80,12 +98,15 @@ public final class ListBacktestJobsResponse {
     }
 
     private boolean equalTo(ListBacktestJobsResponse other) {
-        return hasMore == other.hasMore && nextOffset.equals(other.nextOffset) && runs.equals(other.runs);
+        return hasMore == other.hasMore
+                && nextCursor.equals(other.nextCursor)
+                && nextOffset.equals(other.nextOffset)
+                && runs.equals(other.runs);
     }
 
     @java.lang.Override
     public int hashCode() {
-        return Objects.hash(this.hasMore, this.nextOffset, this.runs);
+        return Objects.hash(this.hasMore, this.nextCursor, this.nextOffset, this.runs);
     }
 
     @java.lang.Override
@@ -110,6 +131,12 @@ public final class ListBacktestJobsResponse {
 
         _FinalStage additionalProperties(Map<String, Object> additionalProperties);
 
+        _FinalStage nextCursor(Optional<String> nextCursor);
+
+        _FinalStage nextCursor(String nextCursor);
+
+        _FinalStage nextCursor(Nullable<String> nextCursor);
+
         _FinalStage nextOffset(Optional<Integer> nextOffset);
 
         _FinalStage nextOffset(Integer nextOffset);
@@ -129,6 +156,8 @@ public final class ListBacktestJobsResponse {
 
         private List<ListBacktestJobsResponseRunsItem> runs = new ArrayList<>();
 
+        private Optional<String> nextCursor = Optional.empty();
+
         private Optional<Integer> nextOffset = Optional.empty();
 
         @JsonAnySetter
@@ -139,6 +168,7 @@ public final class ListBacktestJobsResponse {
         @java.lang.Override
         public Builder from(ListBacktestJobsResponse other) {
             hasMore(other.getHasMore());
+            nextCursor(other.getNextCursor());
             nextOffset(other.getNextOffset());
             runs(other.getRuns());
             return this;
@@ -176,6 +206,31 @@ public final class ListBacktestJobsResponse {
         }
 
         @java.lang.Override
+        public _FinalStage nextCursor(Nullable<String> nextCursor) {
+            if (nextCursor.isNull()) {
+                this.nextCursor = null;
+            } else if (nextCursor.isEmpty()) {
+                this.nextCursor = Optional.empty();
+            } else {
+                this.nextCursor = Optional.of(nextCursor.get());
+            }
+            return this;
+        }
+
+        @java.lang.Override
+        public _FinalStage nextCursor(String nextCursor) {
+            this.nextCursor = Optional.ofNullable(nextCursor);
+            return this;
+        }
+
+        @java.lang.Override
+        @JsonSetter(value = "nextCursor", nulls = Nulls.SKIP)
+        public _FinalStage nextCursor(Optional<String> nextCursor) {
+            this.nextCursor = nextCursor;
+            return this;
+        }
+
+        @java.lang.Override
         public _FinalStage nextOffset(Nullable<Integer> nextOffset) {
             if (nextOffset.isNull()) {
                 this.nextOffset = null;
@@ -202,7 +257,7 @@ public final class ListBacktestJobsResponse {
 
         @java.lang.Override
         public ListBacktestJobsResponse build() {
-            return new ListBacktestJobsResponse(hasMore, nextOffset, runs, additionalProperties);
+            return new ListBacktestJobsResponse(hasMore, nextCursor, nextOffset, runs, additionalProperties);
         }
 
         @java.lang.Override
