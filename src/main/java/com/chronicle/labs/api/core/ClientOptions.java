@@ -47,10 +47,10 @@ public final class ClientOptions {
         this.headers.putAll(headers);
         this.headers.putAll(new HashMap<String, String>() {
             {
-                put("User-Agent", "com.chronicle-labs.chronicle-sdk/0.0.10");
+                put("User-Agent", "com.chronicle-labs.chronicle-sdk/0.0.11");
                 put("X-Fern-Language", "JAVA");
                 put("X-Fern-SDK-Name", "com.chronicle-labs:chronicle-sdk");
-                put("X-Fern-SDK-Version", "0.0.10");
+                put("X-Fern-SDK-Version", "0.0.11");
             }
         });
         this.headerSuppliers = headerSuppliers;

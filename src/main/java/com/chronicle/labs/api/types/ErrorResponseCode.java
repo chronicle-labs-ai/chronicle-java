@@ -21,9 +21,16 @@ public final class ErrorResponseCode {
     public static final ErrorResponseCode SERVICE_OVERLOADED =
             new ErrorResponseCode(Value.SERVICE_OVERLOADED, "service_overloaded");
 
+    public static final ErrorResponseCode SERVICE_UNAVAILABLE =
+            new ErrorResponseCode(Value.SERVICE_UNAVAILABLE, "service_unavailable");
+
     public static final ErrorResponseCode BAD_REQUEST = new ErrorResponseCode(Value.BAD_REQUEST, "bad_request");
 
     public static final ErrorResponseCode UNAUTHORIZED = new ErrorResponseCode(Value.UNAUTHORIZED, "unauthorized");
+
+    public static final ErrorResponseCode FORBIDDEN = new ErrorResponseCode(Value.FORBIDDEN, "forbidden");
+
+    public static final ErrorResponseCode CONFLICT = new ErrorResponseCode(Value.CONFLICT, "conflict");
 
     public static final ErrorResponseCode STREAM_UNAVAILABLE =
             new ErrorResponseCode(Value.STREAM_UNAVAILABLE, "stream_unavailable");
@@ -85,10 +92,16 @@ public final class ErrorResponseCode {
                 return visitor.visitStreamReplayLimitExceeded();
             case SERVICE_OVERLOADED:
                 return visitor.visitServiceOverloaded();
+            case SERVICE_UNAVAILABLE:
+                return visitor.visitServiceUnavailable();
             case BAD_REQUEST:
                 return visitor.visitBadRequest();
             case UNAUTHORIZED:
                 return visitor.visitUnauthorized();
+            case FORBIDDEN:
+                return visitor.visitForbidden();
+            case CONFLICT:
+                return visitor.visitConflict();
             case STREAM_UNAVAILABLE:
                 return visitor.visitStreamUnavailable();
             case REQUEST_TIMEOUT:
@@ -122,10 +135,16 @@ public final class ErrorResponseCode {
                 return STREAM_REPLAY_LIMIT_EXCEEDED;
             case "service_overloaded":
                 return SERVICE_OVERLOADED;
+            case "service_unavailable":
+                return SERVICE_UNAVAILABLE;
             case "bad_request":
                 return BAD_REQUEST;
             case "unauthorized":
                 return UNAUTHORIZED;
+            case "forbidden":
+                return FORBIDDEN;
+            case "conflict":
+                return CONFLICT;
             case "stream_unavailable":
                 return STREAM_UNAVAILABLE;
             case "request_timeout":
@@ -152,6 +171,10 @@ public final class ErrorResponseCode {
 
         UNAUTHORIZED,
 
+        FORBIDDEN,
+
+        CONFLICT,
+
         VALIDATION_ERROR,
 
         UNSUPPORTED_MEDIA_TYPE,
@@ -165,6 +188,8 @@ public final class ErrorResponseCode {
         STREAM_UNAVAILABLE,
 
         SERVICE_OVERLOADED,
+
+        SERVICE_UNAVAILABLE,
 
         REQUEST_TIMEOUT,
 
@@ -184,6 +209,10 @@ public final class ErrorResponseCode {
 
         T visitUnauthorized();
 
+        T visitForbidden();
+
+        T visitConflict();
+
         T visitValidationError();
 
         T visitUnsupportedMediaType();
@@ -197,6 +226,8 @@ public final class ErrorResponseCode {
         T visitStreamUnavailable();
 
         T visitServiceOverloaded();
+
+        T visitServiceUnavailable();
 
         T visitRequestTimeout();
 

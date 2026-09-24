@@ -113,7 +113,7 @@ public class BacktestsWireTest {
                 new MockResponse()
                         .setResponseCode(200)
                         .setBody(
-                                "{\"hasMore\":true,\"nextOffset\":1,\"runs\":[{\"agentIds\":[\"agentIds\"],\"datasetLabel\":\"datasetLabel\",\"divergences\":1,\"environmentLabel\":\"environmentLabel\",\"hue\":\"hue\",\"id\":\"id\",\"mode\":\"replay\",\"name\":\"name\",\"owner\":\"owner\",\"scheduledFor\":\"2024-01-15T09:30:00Z\",\"status\":\"running\",\"totalRuns\":1,\"updatedAt\":\"2024-01-15T09:30:00Z\",\"verdict\":\"verdict\"}]}"));
+                                "{\"hasMore\":true,\"nextCursor\":\"nextCursor\",\"nextOffset\":1,\"runs\":[{\"agentIds\":[\"agentIds\"],\"datasetLabel\":\"datasetLabel\",\"divergences\":1,\"environmentLabel\":\"environmentLabel\",\"hue\":\"hue\",\"id\":\"id\",\"mode\":\"replay\",\"name\":\"name\",\"owner\":\"owner\",\"scheduledFor\":\"2024-01-15T09:30:00Z\",\"status\":\"running\",\"totalRuns\":1,\"updatedAt\":\"2024-01-15T09:30:00Z\",\"verdict\":\"verdict\"}]}"));
         ListBacktestJobsResponse response = client.backtests()
                 .listBacktestJobs(ListBacktestJobsRequest.builder().build());
         RecordedRequest request = server.takeRequest();
@@ -126,6 +126,7 @@ public class BacktestsWireTest {
         String expectedResponseBody = ""
                 + "{\n"
                 + "  \"hasMore\": true,\n"
+                + "  \"nextCursor\": \"nextCursor\",\n"
                 + "  \"nextOffset\": 1,\n"
                 + "  \"runs\": [\n"
                 + "    {\n"
@@ -410,7 +411,7 @@ public class BacktestsWireTest {
                 new MockResponse()
                         .setResponseCode(200)
                         .setBody(
-                                "{\"hasMore\":true,\"nextOffset\":1,\"rewards\":{\"key\":{\"key\":1.1}},\"trials\":[{\"agentId\":\"agentId\",\"agentLabel\":\"agentLabel\",\"attempt\":1,\"caseCluster\":\"caseCluster\",\"caseId\":\"caseId\",\"createdAt\":\"2024-01-15T09:30:00Z\",\"durationMs\":1,\"exception\":{\"kind\":\"kind\",\"message\":\"message\"},\"id\":\"id\",\"instruction\":\"instruction\",\"isBaseline\":true,\"jobId\":\"jobId\",\"sandboxId\":\"sandboxId\",\"status\":\"pending\",\"tenantId\":\"tenantId\",\"timings\":{},\"updatedAt\":\"2024-01-15T09:30:00Z\"}]}"));
+                                "{\"hasMore\":true,\"nextCursor\":\"nextCursor\",\"nextOffset\":1,\"rewards\":{\"key\":{\"key\":1.1}},\"trials\":[{\"agentId\":\"agentId\",\"agentLabel\":\"agentLabel\",\"attempt\":1,\"caseCluster\":\"caseCluster\",\"caseId\":\"caseId\",\"createdAt\":\"2024-01-15T09:30:00Z\",\"durationMs\":1,\"exception\":{\"kind\":\"kind\",\"message\":\"message\"},\"id\":\"id\",\"instruction\":\"instruction\",\"isBaseline\":true,\"jobId\":\"jobId\",\"sandboxId\":\"sandboxId\",\"status\":\"pending\",\"tenantId\":\"tenantId\",\"timings\":{},\"updatedAt\":\"2024-01-15T09:30:00Z\"}]}"));
         ListBacktestJobTrialsResponse response = client.backtests()
                 .listBacktestJobTrials(
                         "job_id", ListBacktestJobTrialsRequest.builder().build());
@@ -424,6 +425,7 @@ public class BacktestsWireTest {
         String expectedResponseBody = ""
                 + "{\n"
                 + "  \"hasMore\": true,\n"
+                + "  \"nextCursor\": \"nextCursor\",\n"
                 + "  \"nextOffset\": 1,\n"
                 + "  \"rewards\": {\n"
                 + "    \"key\": {\n"
